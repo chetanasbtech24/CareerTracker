@@ -1,4 +1,3 @@
-// Cleaned file header to remove hidden BOM
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
@@ -74,8 +73,6 @@ public class CareerTracker extends JFrame {
     private void formRow(JPanel form, GridBagConstraints g, int row, String label, JComponent field) {
     int startRow = 1;
     g.gridy = startRow + row;
-
-    // LABEL
     g.gridx = 0;
     g.gridwidth = 1;
     g.weightx = 0;
@@ -86,8 +83,7 @@ public class CareerTracker extends JFrame {
     l.setForeground(TEXT_SECONDARY);
     l.setPreferredSize(new Dimension(180, 30));
     form.add(l, g);
-
-    // FIELD
+        
     g.gridx = 1;
     g.weightx = 1;
     g.insets = new Insets(10, 0, 10, 10);
@@ -119,9 +115,8 @@ public class CareerTracker extends JFrame {
     }
 
     private JPanel buildSidebar() {
-
     JPanel side = new JPanel();
-    side.setBackground(new Color(15, 23, 42)); // deeper dark
+    side.setBackground(new Color(15, 23, 42)); 
     side.setPreferredSize(new Dimension(260, 0));
     side.setLayout(new BoxLayout(side, BoxLayout.Y_AXIS));
     side.setBorder(new EmptyBorder(PAD, 18, PAD, 18));
@@ -181,8 +176,7 @@ public class CareerTracker extends JFrame {
         return null;
     }
 }
-
-    // ✅ CORRECTED buildMainContent() - NO SCROLL
+    
     private JPanel buildMainContent() {
         JPanel center = new JPanel(new BorderLayout(0, GAP));
         center.setOpaque(true);
